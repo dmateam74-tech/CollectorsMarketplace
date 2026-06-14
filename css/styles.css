@@ -1,0 +1,20 @@
+/* Team 4 Prototype Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #cccccc;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #cccccc;
+}
