@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View item details, condition, seller info, and make a trade offer on Collector's Marketplace.">
+  <meta name="author" content="DEV109 Team 4 – Rana Moradi & Aayush Mehmi">
+  <meta name="keywords" content="product detail, make offer, trade collectible, item condition, seller rating">
+  <title>Item Detail – Collector's Marketplace</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">Collector's Marketplace</a>
+      <ul class="nav-links">
+        <li><a href="browse.html?category=cards">Cards</a></li>
+        <li><a href="browse.html?category=collectibles">Collectibles</a></li>
+        <li><a href="browse.html?sort=trending">Trending</a></li>
+        <li><a href="browse.html?type=trades">Trades</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="trade-flow.html" class="btn-nav">Start a Trade</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Product Detail -->
+  <div class="section">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>›</span>
+        <a href="browse.html?category=cards">Cards</a>
+        <span>›</span>
+        <a href="browse.html?category=pokemon">Pokémon</a>
+        <span>›</span>
+        <span>Charizard Base Set Holo</span>
+      </nav>
+
+      <div class="pdp-layout">
+
+        <!-- Item Image -->
+        <div>
+          <div class="pdp-image" role="img" aria-label="Product image placeholder">
+            [ Item Photo ]
+          </div>
+        </div>
+
+        <!-- Item Info -->
+        <div class="pdp-info">
+          <h1>Charizard Base Set Holo</h1>
+
+          <div class="pdp-tags">
+            <span class="tag">Graded PSA 9</span>
+            <span class="tag">1st Edition</span>
+            <span class="tag">Trade or Buy</span>
+          </div>
+
+          <p class="pdp-price">Est. Value: $1,200</p>
+
+          <p class="pdp-seller">
+            Seller: <strong>JohnC_Collects</strong> &nbsp;·&nbsp;
+            <span style="color: var(--gold);">★★★★★</span> 98% positive &nbsp;·&nbsp;
+            142 completed trades
+          </p>
+
+          <div class="pdp-description">
+            <p>Base Set 1st Edition Charizard, graded PSA 9. Card has excellent centering and no visible scratches on the holo surface. One small print line on the back, noted in the PSA report. This is a grail card for any serious Pokémon collector. Open to trades for other PSA 9+ graded holos or sealed product of comparable value.</p>
+          </div>
+
+          <div class="pdp-actions">
+            <a href="trade-flow.html" class="btn-primary">Make a Trade Offer</a>
+            <button class="btn-secondary">Buy Now – $1,200</button>
+          </div>
+
+          <!-- Saves / Offers Tabs -->
+          <div class="pdp-tabs" role="tablist" aria-label="Item statistics">
+            <div class="pdp-tab active" role="tab" aria-selected="true">In Saves (24)</div>
+            <div class="pdp-tab" role="tab" aria-selected="false">Offers Made (7)</div>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--muted);">24 collectors have saved this item. 7 trade offers have been made so far.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Browse</h4>
+          <ul>
+            <li><a href="browse.html?category=cards">Cards</a></li>
+            <li><a href="browse.html?category=collectibles">Collectibles</a></li>
+            <li><a href="browse.html?sort=trending">Trending</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="profile.html">My Profile</a></li>
+            <li><a href="#">My Listings</a></li>
+            <li><a href="#">Messages</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 2026 Collector's Marketplace. Built for DEV109 &amp; DMA205 Collaboration.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

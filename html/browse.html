@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse collectibles, trading cards, figurines, and more on Collector's Marketplace. Filter by category, condition, price, and seller rating.">
+  <meta name="author" content="DEV109 Team 4 – Rana Moradi & Aayush Mehmi">
+  <meta name="keywords" content="browse collectibles, trading cards, buy sell trade, pokemon cards, sports cards">
+  <title>Browse Listings – Collector's Marketplace</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">Collector's Marketplace</a>
+      <ul class="nav-links">
+        <li><a href="browse.html?category=cards">Cards</a></li>
+        <li><a href="browse.html?category=collectibles">Collectibles</a></li>
+        <li><a href="browse.html?sort=trending">Trending</a></li>
+        <li><a href="browse.html?type=trades">Trades</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="trade-flow.html" class="btn-nav">Start a Trade</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="section" style="padding-bottom: 1rem; border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <h1 style="font-size: 1.6rem;">Browse Listings</h1>
+      <div class="category-pills" style="margin-top: 1rem;">
+        <a href="browse.html?category=all" class="pill active">All</a>
+        <a href="browse.html?category=pokemon" class="pill">Pokémon</a>
+        <a href="browse.html?category=sports" class="pill">Sports Cards</a>
+        <a href="browse.html?category=yugioh" class="pill">Yu-Gi-Oh</a>
+        <a href="browse.html?category=figurines" class="pill">Figurines</a>
+        <a href="browse.html?category=blind-boxes" class="pill">Blind Boxes</a>
+        <a href="browse.html?category=plush" class="pill">Plush &amp; Misc</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Browse Layout -->
+  <div class="section">
+    <div class="container">
+      <div class="browse-layout">
+
+        <!-- Filters Sidebar -->
+        <aside class="filters-sidebar" aria-label="Filter listings">
+          <h3>Filter Results</h3>
+
+          <div class="filter-group">
+            <label for="filter-category">Category</label>
+            <select id="filter-category" name="category">
+              <option value="">All Categories</option>
+              <option value="cards">Cards</option>
+              <option value="pokemon">Pokémon</option>
+              <option value="sports">Sports Cards</option>
+              <option value="yugioh">Yu-Gi-Oh</option>
+              <option value="collectibles">Collectibles</option>
+              <option value="figurines">Figurines</option>
+              <option value="blind-boxes">Blind Boxes</option>
+              <option value="toys">Toys</option>
+              <option value="plush">Plush &amp; Misc</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filter-listing-type">Listing Type</label>
+            <select id="filter-listing-type" name="listing-type">
+              <option value="">All Types</option>
+              <option value="trade">Trade Only</option>
+              <option value="buy">Buy Only</option>
+              <option value="both">Buy or Trade</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filter-condition">Condition</label>
+            <select id="filter-condition" name="condition">
+              <option value="">Any Condition</option>
+              <option value="graded">Graded (PSA/BGS)</option>
+              <option value="sealed">Sealed / MIB</option>
+              <option value="near-mint">Near Mint</option>
+              <option value="lightly-played">Lightly Played</option>
+              <option value="played">Played</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filter-price">Price Range</label>
+            <input type="range" id="filter-price" name="price" min="0" max="1000" value="500">
+            <div class="range-labels">
+              <span>$0</span>
+              <span>$1000+</span>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <label for="filter-rating">Seller Rating</label>
+            <select id="filter-rating" name="rating">
+              <option value="">Any Rating</option>
+              <option value="5">★★★★★ (100%)</option>
+              <option value="4">★★★★☆ (90%+)</option>
+              <option value="3">★★★☆☆ (80%+)</option>
+            </select>
+          </div>
+
+          <button class="btn-primary" style="width: 100%;">Apply Filters</button>
+        </aside>
+
+        <!-- Results Grid -->
+        <main aria-label="Listing results">
+          <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 1.5rem;">Showing 12 of 248 listings</p>
+
+          <div class="cards-grid">
+
+            <article class="product-card">
+              <div class="card-image" aria-label="Item image">[ Photo ]</div>
+              <div class="card-body">
+                <span class="card-condition">Graded PSA 10</span>
+                <h3>Pikachu Illustrator Promo</h3>
+                <p class="card-seller">Seller: RarePullsOnly</p>
+                <p class="card-rating">★★★★★ (99%)</p>
+              </div>
+              <div class="card-footer">
+                <a href="product-detail.html" class="btn-primary">Trade Now</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="card-image" aria-label="Item image">[ Photo ]</div>
+              <div class="card-body">
+                <span class="card-condition">Sealed</span>
+                <h3>Scarlet &amp; Violet Booster Box</h3>
+                <p class="card-seller">Seller: PokePulls_WA</p>
+                <p class="card-rating">★★★★☆ (95%)</p>
+              </div>
+              <div class="card-footer">
+                <a href="product-detail.html" class="btn-primary">Trade Now</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="card-image" aria-label="Item image">[ Photo ]</div>
+              <div class="card-body">
+                <span class="card-condition">Near Mint</span>
+                <h3>Charizard VMAX Alt Art</h3>
+                <p class="card-seller">Seller: JohnC_Collects</p>
+                <p class="card-rating">★★★★★ (98%)</p>
+              </div>
+              <div class="card-footer">
+                <a href="product-detail.html" class="btn-primary">Trade Now</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="card-image" aria-label="Item image">[ Photo ]</div>
+              <div class="card-body">
+                <span class="card-condition">MIB</span>
+                <h3>Labubu Series 2 Full Set</h3>
+                <p class="card-seller">Seller: BoxHunterKai</p>
+                <p class="card-rating">★★★★☆ (91%)</p>
+              </div>
+              <div class="card-footer">
+                <a href="product-detail.html" class="btn-primary">Trade Now</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="card-image" aria-label="Item image">[ Photo ]</div>
+              <div class="card-body">
+                <span class="card-condition">Graded BGS 9.5</span>
+                <h3>LeBron James RC Topps Chrome</h3>
+                <p class="card-seller">Seller: SportsDave88</p>
+                <p class="card-rating">★★★★★ (100%)</p>
+              </div>
+              <div class="card-footer">
+                <a href="product-detail.html" class="btn-primary">Trade Now</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="card-image" aria-label="Item image">[ Photo ]</div>
+              <div class="card-body">
+                <span class="card-condition">Near Mint</span>
+                <h3>Exodia the Forbidden One Set</h3>
+                <p class="card-seller">Seller: YGOVaultTX</p>
+                <p class="card-rating">★★★★★ (100%)</p>
+              </div>
+              <div class="card-footer">
+                <a href="product-detail.html" class="btn-primary">Trade Now</a>
+              </div>
+            </article>
+
+          </div>
+        </main>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Browse</h4>
+          <ul>
+            <li><a href="browse.html?category=cards">Cards</a></li>
+            <li><a href="browse.html?category=collectibles">Collectibles</a></li>
+            <li><a href="browse.html?sort=trending">Trending</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="profile.html">My Profile</a></li>
+            <li><a href="#">My Listings</a></li>
+            <li><a href="#">Messages</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 2026 Collector's Marketplace. Built for DEV109 &amp; DMA205 Collaboration.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

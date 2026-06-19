@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Start a trade on Collector's Marketplace. Upload your item, add details, get an estimated value, and send your offer in four easy steps.">
+  <meta name="author" content="DEV109 Team 4 – Rana Moradi & Aayush Mehmi">
+  <meta name="keywords" content="start trade, make offer, trade collectible, upload item, trade flow">
+  <title>Start a Trade – Collector's Marketplace</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    /* Page-specific style: highlight active step panel */
+    .trade-panel { display: none; }
+    .trade-panel.active { display: block; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">Collector's Marketplace</a>
+      <ul class="nav-links">
+        <li><a href="browse.html?category=cards">Cards</a></li>
+        <li><a href="browse.html?category=collectibles">Collectibles</a></li>
+        <li><a href="browse.html?sort=trending">Trending</a></li>
+        <li><a href="browse.html?type=trades">Trades</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="browse.html" class="btn-nav">Browse</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Trade Flow -->
+  <div class="section">
+    <div class="container">
+      <h1 style="text-align: center; font-size: 1.8rem; margin-bottom: 0.5rem;">Start a Trade</h1>
+      <p style="text-align: center; color: var(--muted); margin-bottom: 2.5rem;">Tell us about the item you want to offer in trade.</p>
+
+      <!-- Step Indicators -->
+      <div class="trade-steps" aria-label="Trade progress">
+
+        <div class="step-wrapper">
+          <div class="step-num active" id="step-num-1" aria-current="step">1</div>
+          <div class="step-label">Upload Photo</div>
+        </div>
+
+        <div class="step-connector"></div>
+
+        <div class="step-wrapper">
+          <div class="step-num" id="step-num-2">2</div>
+          <div class="step-label">Item Details</div>
+        </div>
+
+        <div class="step-connector"></div>
+
+        <div class="step-wrapper">
+          <div class="step-num" id="step-num-3">3</div>
+          <div class="step-label">Est. Value</div>
+        </div>
+
+        <div class="step-connector"></div>
+
+        <div class="step-wrapper">
+          <div class="step-num" id="step-num-4">4</div>
+          <div class="step-label">Send Offer</div>
+        </div>
+
+      </div>
+
+      <!-- Step 1: Upload Photo -->
+      <div class="trade-form-card trade-panel active" id="panel-1" aria-labelledby="step1-heading">
+        <h2 id="step1-heading">Step 1: Upload Item Photo</h2>
+        <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 1.5rem;">
+          A clear photo helps the other collector evaluate your offer. Include front, back, and any graded slab if applicable.
+        </p>
+
+        <div class="upload-zone" role="button" tabindex="0" aria-label="Upload item photo">
+          <p style="font-size: 2rem; color: var(--gold);">&#8679;</p>
+          <p><strong>Click to upload</strong> or drag and drop</p>
+          <p>JPG, PNG, or WEBP · Max 10MB per photo</p>
+        </div>
+
+        <div class="form-nav">
+          <span></span>
+          <button class="btn-primary" onclick="goToStep(2)">Next: Item Details →</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Item Details -->
+      <div class="trade-form-card trade-panel" id="panel-2" aria-labelledby="step2-heading">
+        <h2 id="step2-heading">Step 2: Item Details</h2>
+
+        <div class="form-group">
+          <label for="item-name">Item Name</label>
+          <input type="text" id="item-name" name="item-name" placeholder="e.g. Charizard Base Set Holo 1st Edition">
+        </div>
+
+        <div class="form-group">
+          <label for="item-category">Category</label>
+          <select id="item-category" name="item-category">
+            <option value="">Select a category</option>
+            <option value="pokemon">Pokémon Cards</option>
+            <option value="sports">Sports Cards</option>
+            <option value="yugioh">Yu-Gi-Oh Cards</option>
+            <option value="figurines">Figurines</option>
+            <option value="blind-boxes">Blind Boxes</option>
+            <option value="toys">Toys</option>
+            <option value="plush">Plush &amp; Misc</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="item-condition">Condition</label>
+          <select id="item-condition" name="item-condition">
+            <option value="">Select condition</option>
+            <option value="graded-psa">Graded – PSA</option>
+            <option value="graded-bgs">Graded – BGS</option>
+            <option value="sealed">Sealed / MIB</option>
+            <option value="near-mint">Near Mint</option>
+            <option value="lightly-played">Lightly Played</option>
+            <option value="played">Played</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="item-description">Description</label>
+          <textarea id="item-description" name="item-description" placeholder="Describe your item — note any flaws, special attributes, or what you're looking for in return."></textarea>
+        </div>
+
+        <div class="form-nav">
+          <button class="btn-secondary" onclick="goToStep(1)">← Back</button>
+          <button class="btn-primary" onclick="goToStep(3)">Next: Get Estimate →</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Estimated Trade Value -->
+      <div class="trade-form-card trade-panel" id="panel-3" aria-labelledby="step3-heading">
+        <h2 id="step3-heading">Step 3: Estimated Trade Value</h2>
+        <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 1.5rem;">
+          Enter a value or get an estimate based on recent trades for similar items on the marketplace.
+        </p>
+
+        <div class="form-group">
+          <label for="manual-value">Your Estimated Value (USD)</label>
+          <input type="number" id="manual-value" name="manual-value" placeholder="e.g. 250">
+        </div>
+
+        <div class="estimate-box">
+          <p>Marketplace estimate based on recent trades</p>
+          <div class="estimate-value">$230 – $280</div>
+        </div>
+
+        <button class="btn-secondary" style="margin-bottom: 1.5rem;" onclick="alert('In a live build, this would pull current market data.')">
+          Get Estimate
+        </button>
+
+        <div class="form-nav">
+          <button class="btn-secondary" onclick="goToStep(2)">← Back</button>
+          <button class="btn-primary" onclick="goToStep(4)">Next: Review &amp; Send →</button>
+        </div>
+      </div>
+
+      <!-- Step 4: Send Offer -->
+      <div class="trade-form-card trade-panel" id="panel-4" aria-labelledby="step4-heading">
+        <h2 id="step4-heading">Step 4: Send Your Offer</h2>
+        <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 1.5rem;">
+          Review your offer before sending. The seller will receive a notification and can accept, decline, or counter.
+        </p>
+
+        <div style="background: var(--grey); border-radius: 8px; padding: 1.25rem; margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1rem; margin-bottom: 0.75rem; color: var(--navy);">Your Offer Summary</h3>
+          <p style="font-size: 0.9rem;"><strong>Item:</strong> [Your item name]</p>
+          <p style="font-size: 0.9rem;"><strong>Category:</strong> [Selected category]</p>
+          <p style="font-size: 0.9rem;"><strong>Condition:</strong> [Selected condition]</p>
+          <p style="font-size: 0.9rem;"><strong>Your Est. Value:</strong> $[Your value]</p>
+        </div>
+
+        <div class="form-group">
+          <label for="offer-message">Add a Message (optional)</label>
+          <textarea id="offer-message" name="offer-message" placeholder="Add a note to the seller — introduce yourself or explain why you think this is a fair trade."></textarea>
+        </div>
+
+        <div class="form-nav">
+          <button class="btn-secondary" onclick="goToStep(3)">← Back</button>
+          <button class="btn-primary" onclick="alert('Offer sent! In a live build this would notify the seller.')">Send Offer ✓</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Browse</h4>
+          <ul>
+            <li><a href="browse.html?category=cards">Cards</a></li>
+            <li><a href="browse.html?category=collectibles">Collectibles</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="profile.html">My Profile</a></li>
+            <li><a href="#">My Listings</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">How Trades Work</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 2026 Collector's Marketplace. Built for DEV109 &amp; DMA205 Collaboration.</p>
+    </div>
+  </footer>
+
+  <script>
+    function goToStep(step) {
+      // Hide all panels
+      document.querySelectorAll('.trade-panel').forEach(function(panel) {
+        panel.classList.remove('active');
+      });
+      // Reset all step numbers
+      document.querySelectorAll('.step-num').forEach(function(num) {
+        num.classList.remove('active', 'done');
+      });
+      // Show the target panel
+      document.getElementById('panel-' + step).classList.add('active');
+      // Update step indicators
+      for (var i = 1; i <= 4; i++) {
+        var el = document.getElementById('step-num-' + i);
+        if (i < step) {
+          el.classList.add('done');
+          el.textContent = '✓';
+        } else if (i === step) {
+          el.classList.add('active');
+        }
+      }
+      // Scroll to top of form
+      window.scrollTo({ top: 200, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>

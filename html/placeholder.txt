@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Collector's Marketplace – Trade, buy, and sell collectibles including trading cards, figurines, and blind boxes with fellow collectors.">
+  <meta name="author" content="DEV109 Team 4 – Rana Moradi & Aayush Mehmi">
+  <meta name="keywords" content="collectibles, trading cards, pokemon, yugioh, sports cards, trade, marketplace, figurines">
+  <title>Collector's Marketplace – Trade What You Love</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo">Collector's Marketplace</a>
+      <ul class="nav-links">
+        <li><a href="html/browse.html?category=cards">Cards</a></li>
+        <li><a href="html/browse.html?category=collectibles">Collectibles</a></li>
+        <li><a href="html/browse.html?sort=trending">Trending</a></li>
+        <li><a href="html/browse.html?type=trades">Trades</a></li>
+        <li><a href="html/profile.html">Profile</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="html/browse.html" class="btn-nav">Browse</a>
+        <a href="html/trade-flow.html" class="btn-nav">Start a Trade</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="container">
+      <h1 id="hero-heading">Trade What You <span>Love</span></h1>
+      <p>The marketplace built for collectors. Swap cards, figurines, blind boxes, and more — directly with other collectors who get it.</p>
+      <div class="hero-actions">
+        <a href="html/trade-flow.html" class="btn-primary">Start a Trade</a>
+        <a href="html/browse.html" class="btn-secondary">Browse Listings</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Pills -->
+  <section class="section" aria-labelledby="category-heading">
+    <div class="container">
+      <h2 id="category-heading" class="sr-only">Browse by Category</h2>
+      <div class="category-pills">
+        <a href="html/browse.html?category=all" class="pill active">All</a>
+        <a href="html/browse.html?category=pokemon" class="pill">Pokémon</a>
+        <a href="html/browse.html?category=sports" class="pill">Sports Cards</a>
+        <a href="html/browse.html?category=yugioh" class="pill">Yu-Gi-Oh</a>
+        <a href="html/browse.html?category=figurines" class="pill">Figurines</a>
+        <a href="html/browse.html?category=blind-boxes" class="pill">Blind Boxes</a>
+        <a href="html/browse.html?category=plush" class="pill">Plush &amp; Misc</a>
+      </div>
+
+      <!-- Trade Now Section -->
+      <div class="section-header">
+        <h2>Trade Now</h2>
+        <a href="html/browse.html?type=trades">View all trades →</a>
+      </div>
+
+      <div class="cards-grid">
+
+        <!-- Card 1 -->
+        <article class="product-card">
+          <div class="card-image" aria-label="Item image placeholder">[ Item Photo ]</div>
+          <div class="card-body">
+            <span class="card-condition">Graded PSA 9</span>
+            <h3>Charizard Base Set Holo</h3>
+            <p class="card-seller">Seller: JohnC_Collects</p>
+            <p class="card-rating">★★★★★ (98%)</p>
+          </div>
+          <div class="card-footer">
+            <a href="html/product-detail.html" class="btn-primary">Trade Now</a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="product-card">
+          <div class="card-image" aria-label="Item image placeholder">[ Item Photo ]</div>
+          <div class="card-body">
+            <span class="card-condition">Sealed</span>
+            <h3>2023 Topps Chrome Baseball Box</h3>
+            <p class="card-seller">Seller: SportsDave88</p>
+            <p class="card-rating">★★★★☆ (94%)</p>
+          </div>
+          <div class="card-footer">
+            <a href="html/product-detail.html" class="btn-primary">Trade Now</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="product-card">
+          <div class="card-image" aria-label="Item image placeholder">[ Item Photo ]</div>
+          <div class="card-body">
+            <span class="card-condition">Near Mint</span>
+            <h3>Blue-Eyes White Dragon 1st Ed</h3>
+            <p class="card-seller">Seller: YGOVaultTX</p>
+            <p class="card-rating">★★★★★ (100%)</p>
+          </div>
+          <div class="card-footer">
+            <a href="html/product-detail.html" class="btn-primary">Trade Now</a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="product-card">
+          <div class="card-image" aria-label="Item image placeholder">[ Item Photo ]</div>
+          <div class="card-body">
+            <span class="card-condition">MIB</span>
+            <h3>Labubu Series 3 Blind Box</h3>
+            <p class="card-seller">Seller: BoxHunterKai</p>
+            <p class="card-rating">★★★★☆ (91%)</p>
+          </div>
+          <div class="card-footer">
+            <a href="html/product-detail.html" class="btn-primary">Trade Now</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Trending Section -->
+  <section class="section" style="background-color: var(--grey);" aria-labelledby="trending-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="trending-heading">Trending This Week</h2>
+        <a href="html/browse.html?sort=trending">See all →</a>
+      </div>
+      <div class="cards-grid">
+
+        <article class="product-card">
+          <div class="card-image" aria-label="Item image placeholder">[ Item Photo ]</div>
+          <div class="card-body">
+            <span class="card-condition">Hot</span>
+            <h3>Pikachu Illustrator Promo</h3>
+            <p class="card-seller">Seller: RarePullsOnly</p>
+            <p class="card-rating">★★★★★ (99%)</p>
+          </div>
+          <div class="card-footer">
+            <a href="html/product-detail.html" class="btn-primary">Trade Now</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="card-image" aria-label="Item image placeholder">[ Item Photo ]</div>
+          <div class="card-body">
+            <span class="card-condition">Rising</span>
+            <h3>Ghibli Totoro Vinyl Figure</h3>
+            <p class="card-seller">Seller: AnimeFigureHouse</p>
+            <p class="card-rating">★★★★☆ (96%)</p>
+          </div>
+          <div class="card-footer">
+            <a href="html/product-detail.html" class="btn-primary">Trade Now</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="card-image" aria-label="Item image placeholder">[ Item Photo ]</div>
+          <div class="card-body">
+            <span class="card-condition">New</span>
+            <h3>Lorcana Sorcerer Mickey Gold</h3>
+            <p class="card-seller">Seller: CardCastlePNW</p>
+            <p class="card-rating">★★★★★ (97%)</p>
+          </div>
+          <div class="card-footer">
+            <a href="html/product-detail.html" class="btn-primary">Trade Now</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="card-image" aria-label="Item image placeholder">[ Item Photo ]</div>
+          <div class="card-body">
+            <span class="card-condition">Wanted</span>
+            <h3>LOOKING: Mewtwo EX Full Art</h3>
+            <p class="card-seller">Buyer: CollectorRae</p>
+            <p class="card-rating">★★★★☆ (93%)</p>
+          </div>
+          <div class="card-footer">
+            <a href="html/product-detail.html" class="btn-primary">Make Offer</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Browse</h4>
+          <ul>
+            <li><a href="html/browse.html?category=cards">Cards</a></li>
+            <li><a href="html/browse.html?category=collectibles">Collectibles</a></li>
+            <li><a href="html/browse.html?sort=trending">Trending</a></li>
+            <li><a href="html/browse.html?type=trades">Trades</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="html/profile.html">My Profile</a></li>
+            <li><a href="#">My Listings</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Settings</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <ul>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">Safety Tips</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 2026 Collector's Marketplace. Built for DEV109 &amp; DMA205 Collaboration.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
