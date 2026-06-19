@@ -677,7 +677,7 @@ h4 { font-size: 1rem; }
   margin-bottom: 2rem;
 }
 
-.footer-col h4 {
+.footer-col h2 {
   color: var(--gold);
   font-size: 0.85rem;
   text-transform: uppercase;
